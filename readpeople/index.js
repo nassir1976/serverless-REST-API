@@ -16,6 +16,8 @@ exports.handler = async (event) => {
     } else {
       data = await peopleModel.scan().exec();
     }
+
+    console.log("it worked")
     // const {name, phone} = JSON.parse(event.body);
 
     // create an id
