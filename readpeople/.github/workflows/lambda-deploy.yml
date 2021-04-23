@@ -26,8 +26,8 @@ jobs:
       - name: deploy content to aws lambda
         uses: appleboy/lambda-action@master
         with:
-          aws_access_key_id: ${{ AKIAUP455LS3MJEPPPGB }}
-          aws_secret_access_key: ${{ 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 }}
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: serverless-rest-api-read
           zip_file: ./readfunction.zip
