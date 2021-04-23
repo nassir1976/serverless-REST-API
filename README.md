@@ -2,6 +2,9 @@
 
 ### Lab: AWS: API, Dynamo and Lambda
 
+[invoke URL](https://itp6if1h7j.execute-api.us-west-2.amazonaws.com/people)
+
+
 ### overview 
 - Create a single resource REST API using a domain model of your choosing, constructed using AWS Cloud Services.
 
