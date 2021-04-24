@@ -1,31 +1,26 @@
 'use strict';
+const dynamoose = require('dynamoose');
 const peopleModel = require('./people.schema.js');
-const dynamoose = require('dynamoose')
-// const {v4:uuid} = require('uuid')
-exports.handler = async (event) => {
+
+exports.handler = async(event) => {
+  console.log('event======',event)
+
   let data;
-  let id = event.pathParameters && event.pathParameters.id
-
-  try {
-    let result = await peopleModel.delete({ id: id })
-    console.log(result)
-  } catch (e) {
-
+  
+  try{
+  const id = event.id
+    await peopleModel.delete({"id": id});
+    
+  }catch(e){
     return {
       statusCode: 500,
-      response: e.message,
+      body: e.message,
     }
   }
-
   let response = {
     statusCode: 200,
-    body: JSON.stringify({}),
-  };
-
-
-  console.log(response.body)
+    body: JSON.stringify(data),
+  }
+  console.log(response.body);
   return response;
-
-
 }
-
