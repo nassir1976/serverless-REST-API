@@ -1,33 +1,3 @@
-// 'use strict';
-// const dynamoose = require('dynamoose');
-// const peopleModel = require('./people.schema.js');
-
-
-// exports.handler = async (event) => {
-//   console.log("EVENT===", event);
-
-
-//   try {
-//     const id = event.pathParameters && event.pathParameters.id;
-//     record = await peopleModel.query("id").eq(id).exec();
-//     const record = new peopleModel({id});
-
-//     data = await record.delete();
-
-//     return {
-//       statusCode: 201,
-//       body: JSON.stringify(data)
-//     }
-
-
-
-//   } catch (e) {
-//     return {
-//       statusCode: 500,
-//       body: e.message
-//     }
-//   }
-// }
 
 'use strict'
 
